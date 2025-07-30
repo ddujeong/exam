@@ -10,9 +10,10 @@ public class Test10 {
 		int A = scanner.nextInt();
 		int B = scanner.nextInt();
 		
-		System.out.println("    " + A);
-		System.out.println("  X " +B);
-		
+		System.out.println("      " + A);
+		System.out.println("    X " +B);
+		System.out.println("----------");
+		System.out.println();
 	}
 
 }
