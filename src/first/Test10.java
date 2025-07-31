@@ -9,11 +9,12 @@ public class Test10 {
 		Scanner scanner = new Scanner(System.in);
 		int A = scanner.nextInt();
 		int B = scanner.nextInt();
-		
-		System.out.println("      " + A);
-		System.out.println("    X " +B);
-		System.out.println("----------");
-		System.out.println();
-	}
 
+		System.out.println(A *(B%10));
+		System.out.println(A *((B/10)%10));
+		System.out.println(A *(B/100));
+		System.out.println(A * B);
+		scanner.close();
+
+}
 }
