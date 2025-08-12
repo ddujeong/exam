@@ -12,19 +12,25 @@ public class Test03 {
 		// TODO Auto-generated method stub
 		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(System.out));
-		int min = 0;
-		int max = 0;
+		
 		int n = Integer.parseInt(reader.readLine());
 		String[] arr = reader.readLine().split(" ");
+		int min = Integer.parseInt(arr[0]);
+		int max  = min;
 		
-		for (String arr1 : arr) {
-			int num = Integer.parseInt(arr1);
-			}if (min > min) {
-				
+		for (int i = 0; i <n; i++) {
+			int num = Integer.parseInt(arr[i]);
+	
+			if (num < min) {
+				min = num;
+			}else if (num > max) {
+				max = num;
 			}
 			
-		writer.write( min + " " + max);
-		}writer.flush();
+		
+	}writer.write( min + " " + max);
+	writer.flush();
 	}
-
 }
+
+
