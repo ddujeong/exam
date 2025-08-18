@@ -6,22 +6,24 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 
-public class Test06 {
+public class Test09 {
 
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
 		BufferedReader bReader = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bWriter = new BufferedWriter(new OutputStreamWriter(System.out));
 		
-		String str =bReader.readLine();
-		
-		for (int i = 0; i < 26; i++) {
-			char ch = (char) ('a' + i);
-			int index = str.indexOf(ch);
-			bWriter.write(index + " ");
+		String[] str =bReader.readLine().trim().split(" ");
+	
+			String a = new StringBuilder(str[0]).reverse().toString();
+			String b = new StringBuilder(str[1]).reverse().toString();
 			
-		}bWriter.flush();
-		bWriter.close();
+			int numa = Integer.parseInt(a);
+			int numb = Integer.parseInt(b);
+			
+			bWriter.write(Math.max(numa, numb));
+			bWriter.flush();
+			bWriter.close();
 	}
 
 }
