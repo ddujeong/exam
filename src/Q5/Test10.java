@@ -6,24 +6,24 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 
-public class Test09 {
+public class Test10 {
 
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
 		BufferedReader bReader = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bWriter = new BufferedWriter(new OutputStreamWriter(System.out));
 		
-		String[] str =bReader.readLine().trim().split(" ");
-	
-			String a = new StringBuilder(str[0]).reverse().toString();
-			String b = new StringBuilder(str[1]).reverse().toString();
-			
-			int numa = Integer.parseInt(a);
-			int numb = Integer.parseInt(b);
-			
-			bWriter.write(String.valueOf(Math.max(numa, numb)));
-			bWriter.flush();
-			bWriter.close();
+		String num = bReader.readLine();
+		int time = 0;
+		
+		int[] dial = {3,3,3,4,4,4,5,5,5,6,6,6,7,7,7,8,8,8,8,9,9,9,10,10,10,10};
+		
+		for (int i = 0; i < num.length() ; i++) {
+			char ch = num.charAt(i);
+			time += dial[ch -'A'];
+		}bWriter.write(String.valueOf(time));
+		bWriter.flush();
+		bWriter.close();
 	}
-
+	
 }
